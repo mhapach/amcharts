@@ -1,0 +1,19 @@
+{
+    "name": "mhapach/amcharts",
+    "description": "am charts laravel php library",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "mhapach\\AmCharts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mhapach",
+            "email": "mhapach@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    }
+}
