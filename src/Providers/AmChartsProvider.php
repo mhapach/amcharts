@@ -8,17 +8,18 @@ class AmChartsProvider extends ServiceProvider
 {
     public function boot(): void
     {
-//        dd(resource_path('views'));
-//        $this->loadViewsFrom(resource_path('views'), 'amcharts');
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'amcharts');
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../../config/am_charts.php' => config_path('am_charts.php'),
-            ], 'config');
+//            $this->publishes([
+//                __DIR__ . '/../../config/amcharts.php' => config_path('amcharts.php'),
+//            ], 'config');
 
             $this->publishes([
-                __DIR__ . '/../../src/Libs' => app_path('Libs'),
-            ], 'libs');
+                __DIR__ . '/../../resources/views' => resource_path('views/vendor/amcharts'),
+            ], 'views');
+//            $this->publishes([
+//                __DIR__ . '/../../src/Libs' => app_path('Libs'),
+//            ], 'libs');
         }
     }
 
@@ -27,7 +28,7 @@ class AmChartsProvider extends ServiceProvider
         /** @phpstan-ignore-next-line */
         if ( ! $this->app->configurationIsCached()) {
             $this->mergeConfigFrom(
-                __DIR__ . '/../../config/am_charts.php',
+                __DIR__ . '/../../config/amcharts.php',
                 'amcharts'
             );
         }

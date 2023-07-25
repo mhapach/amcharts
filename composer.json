@@ -13,6 +13,13 @@
             "email": "mhapach@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mhapach\\AmCharts\\Providers\\AmChartsProvider"
+            ]
+        }
+    },
     "require": {
         "php": ">=7.2"
     }
