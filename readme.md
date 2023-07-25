@@ -62,9 +62,7 @@ In your controller create instance of AmChart with name of chart that correspond
 
         );
 
-        $chart->addTitle("Percent of people in the world at different poverty levels, 2005");
-
-        return $chart->render();
+        print $chart->render();
      
    
 ## Change log
